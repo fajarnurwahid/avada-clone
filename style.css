@@ -24,6 +24,12 @@
 
     --shadow: 0 6px 24px rgba(0,0,0,.08);
 }
+html {
+    overflow-x: hidden;
+}
+html.no-scroll {
+    overflow: hidden;
+}
 
 
 
@@ -54,12 +60,8 @@ section {
     font-weight: 500;
     transition: all .3s;
 }
-.btn i:first-child {
-    margin-right: 12px;
-    font-size: 20px;
-}
-.btn i:last-child {
-    margin-left: 12px;
+.btn i {
+    margin: 0 12px;
     font-size: 20px;
 }
 .btn-outline-dark {
@@ -657,22 +659,22 @@ footer {
     }
     .navbar-menu {
         position: absolute;
-        display: none;
-        max-width: calc(var(--container-width) - (var(--container-padding) * 2));
+        display: block;
         width: 100%;
+        right: 100%;
         background-color: var(--white);
-        left: 50%;
-        background-color: var(--white);
-        box-shadow: var(--shadow);
         z-index: 50;
-        transform: translateX(-50%);
-        top: 100%;
+        top: 82px;
+        height: calc(100vh - 82px);
+        overflow-y: auto;
+        transition: right .75s;
     }
     .navbar-menu.active {
-        display: block;
+        right: 0;
     }
     .navbar-menu > li {
-        margin-right: 0;
+        margin: 0 auto;
+        max-width: calc(var(--container-width) - (var(--container-padding) * 2));
     }
     .navbar-menu > li > a {
         border-radius: 0;
@@ -702,10 +704,17 @@ footer {
         display: none;
     }
     .navbar-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: start;
         font-size: 28px;
         text-decoration: none;
         color: var(--dark);
+        transform: rotateZ(0);
+        transition: transform .75s;
+    }
+    .navbar-toggle.active {
+        transform: rotateZ(calc(360deg * 2));
     }
 
     .banner-wrapper,

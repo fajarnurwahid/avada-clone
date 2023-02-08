@@ -8,7 +8,20 @@ $('.navbar-menu-dropdown-toggle').click(function(e) {
 
 $('.navbar-toggle').click(function(e) {
     e.preventDefault()
+    var el = $(this)
+
     $('.navbar-menu').toggleClass('active')
+    el.toggleClass('active')
+    $('html').toggleClass('no-scroll', el.hasClass('active'))
+    if(el.hasClass('active')) {
+        setTimeout(function() {
+            el.html('<i class="ri-close-line"></i>')
+        }, 250)
+    } else {
+        setTimeout(function() {
+            el.html('<i class="ri-menu-line"></i>')
+        }, 250)
+    }
 })
 // end: Navbar
 
