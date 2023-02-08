@@ -60,8 +60,12 @@ section {
     font-weight: 500;
     transition: all .3s;
 }
-.btn i {
-    margin: 0 12px;
+.btn > i:is(:first-child) {
+    margin-right: 12px;
+    font-size: 20px;
+}
+.btn > i:is(:last-child) {
+    margin-left: 12px;
     font-size: 20px;
 }
 .btn-outline-dark {
@@ -234,23 +238,6 @@ header {
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 32px;
-}
-hr.header-divider {
-    height: 1px;
-    background-color: var(--gray-200);
-    border: none;
-    margin: 48px 0 32px;
-}
-.header-data {
-    display: flex;
-}
-.header-data > * {
-    margin-right: 24px;
-}
-.header-data-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 8px;
 }
 /* end: Header */
 
