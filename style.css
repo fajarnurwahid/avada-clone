@@ -425,50 +425,6 @@ header {
 
 
 
-/* start: Testimonial */
-.testimonial-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.testimonial-image {
-    background-image: url(img/testimonial.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.testimonial-content {
-    background-color: var(--yellow);
-    padding: 64px;
-}
-.testimonial-content p {
-    font-size: 24px;
-    line-height: 1.6;
-}
-.testimonial-divider {
-    margin: 48px 0;
-    height: 1px;
-    border: none;
-    background-color: rgba(0, 0, 0, .1);
-}
-.testimonial-company {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 20px;
-    font-weight: 600;
-}
-.testimonial-company img {
-    width: 40px;
-    margin-right: 16px;
-}
-.testimonial-profile a {
-    color: var(--dark);
-    text-decoration: none;
-}
-/* end: Testimonial */
-
-
-
 /* start: FAQ */
 .faq-header {
     text-align: center;
@@ -704,7 +660,6 @@ footer {
         transform: rotateZ(calc(360deg * 2));
     }
 
-    .banner-wrapper,
     .testimonial-wrapper,
     .header-wrapper {
         grid-template-columns: 1fr;
@@ -733,17 +688,6 @@ footer {
         width: 100%;
         margin: 16px 0;
     }
-
-    .testimonial-image {
-        height: 500px;
-    }
-    .testimonial-content {
-        padding: 48px;
-    }
-
-    .banner-wrapper {
-        padding: 64px 48px;
-    }
 }
 @media screen and (max-width: 767px) {
     .container {
@@ -754,11 +698,6 @@ footer {
     .web-builder-wrapper,
     .types-wrapper {
         grid-template-columns: 1fr;
-    }
-
-    .testimonial-content,
-    .banner-wrapper {
-        padding: 32px;
     }
 }
 @media screen and (max-width: 575px) {
