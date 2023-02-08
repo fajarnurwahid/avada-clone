@@ -705,6 +705,7 @@ footer {
         display: block;
         font-size: 28px;
         text-decoration: none;
+        color: var(--dark);
     }
 
     .banner-wrapper,
